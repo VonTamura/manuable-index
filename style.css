@@ -9117,7 +9117,7 @@ textarea.form-control-lg {
 .carousel-fade .active.carousel-item-start,.carousel-fade .active.carousel-item-end {
     z-index: 0;
     opacity: 0;
-    transition: opacity 0s 0.6s
+    transition: opacity 0.2s 0.2s
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -23111,6 +23111,10 @@ inputfile:focus+label {
     width: fit-content
 }
 
+.h-fit {
+  height: fit-content
+}
+
 .tabs {
     display: flex;
     flex-wrap: wrap
@@ -23542,6 +23546,31 @@ a.disabled {
         background-position: left
     }
 }
+
+/* Contenedor principal */
+.swaper-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Contenedor interno */
+.swaper {
+  display: flex;
+  gap: 60px; /* Espaciado entre imágenes */
+  position: relative;
+}
+
+/* Imágenes */
+.swaper img {
+  max-height: 100px;
+  width: auto;
+}
+
+
+
+  
+
 
 /*!
  * Datetimepicker for Bootstrap 3
