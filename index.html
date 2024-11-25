@@ -1,487 +1,542 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Manuable</title>
-    <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
 
-    <!-- CSS Stylesheets -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="landing.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Compara tarifas de Envíos con las paqueterías DHL, FedEx, UPS, Redpack y Estafeta y ahorra hasta el 60% de dto. en tus envíos nacionales e internacionales." name="description">
+  <meta content="Envío, Envíos, Cotizar, Cotización, Comparar, API, DHL, FedEx, UPS, Redpack, Estafeta, Paquete, Documento, Nacional, Internacional" name="keywords">
+  <meta name="author" content="Manuable">
+  <title>Manuable</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/x-icon">
 
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.defer=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1925225321260387');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->
+  <!-- CSS Stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="landing.css">
 
-    <!-- Google Tag Manager -->
-    <script defer>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5ZLRXCKS');
-    </script>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.defer = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1925225321260387');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
 
-    <!-- Tracker Metricool -->
-    <script>
-      function loadScript(a) { var b = document.getElementsByTagName("head")[0],
-          c = document.createElement("script"); c.type = "text/javascript",
-          c.src = "https://tracker.metricool.com/resources/be.js",
-          c.onreadystatechange = a, c.onload = a, b.appendChild(c);}
-      loadScript(function() { beTracker.t({ hash: "70803b00d4c847bcc4dd077511013c1b" }); });
-    </script>
+  <!-- Google Tag Manager -->
+  <script defer>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.defer = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5ZLRXCKS');
+  </script>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const swaper = document.querySelector(".swaper");
-        const images = Array.from(swaper.children);
+  <!-- Tracker Metricool -->
+  <script>
+    function loadScript(a) {
+      var b = document.getElementsByTagName("head")[0],
+      c = document.createElement("script"); c.type = "text/javascript",
+        c.src = "https://tracker.metricool.com/resources/be.js",
+        c.onreadystatechange = a, c.onload = a, b.appendChild(c);
+    }
+    loadScript(function () { beTracker.t({ hash: "70803b00d4c847bcc4dd077511013c1b" }); });
+  </script>
 
-        // Duplicar las imágenes para un flujo continuo
-        images.forEach((img) => {
-          const clone = img.cloneNode(true);
-          swaper.appendChild(clone);
-        });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const swaper = document.querySelector(".swaper");
+      const images = Array.from(swaper.children);
 
-        let offset = 0;
-        const speed = 4; // Ajustar la velocidad (número mayor = más rápido)
-
-        const moveSwaper = () => {
-          offset -= speed; // Desplazamiento continuo
-          const firstImage = swaper.children[0];
-          const imageWidth = firstImage.offsetWidth + 60; // Incluye el espaciado `gap`
-
-          if (Math.abs(offset) >= imageWidth) {
-            // Mover la primera imagen al final cuando salga completamente
-            swaper.appendChild(firstImage);
-            offset += imageWidth;
-          }
-
-          swaper.style.transform = `translateX(${offset}px)`;
-          requestAnimationFrame(moveSwaper);
-        };
-
-        moveSwaper();
+      // Duplicar las imágenes para un flujo continuo
+      images.forEach((img) => {
+        const clone = img.cloneNode(true);
+        swaper.appendChild(clone);
       });
 
+      let offset = 0;
+      const speed = 4; // Ajustar la velocidad (número mayor = más rápido)
 
+      const moveSwaper = () => {
+        offset -= speed; // Desplazamiento continuo
+        const firstImage = swaper.children[0];
+        const imageWidth = firstImage.offsetWidth + 60; // Incluye el espaciado `gap`
 
-    </script>
+        if (Math.abs(offset) >= imageWidth) {
+          // Mover la primera imagen al final cuando salga completamente
+          swaper.appendChild(firstImage);
+          offset += imageWidth;
+        }
 
-    <!-- Hotjar Tracking Code for https://manuable.com/ -->
-    <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:5158399,hjsv:6};
-          a=o.getElementsByTagName("head")[0];
-          r=o.createElement("script");r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,"https://static.hotjar.com/c/hotjar-",".js?sv=");
-    </script>
-  </head>
-  <body class="position position-relative bg-white">
-    <main class="position-relative">
-      <header class="navbar navbar-fixed-top navbar-expand-lg py-2 card card-shadow mx-4 mt-3">
-        <div class="container-fluid col-12 fs-4 py-2 card-body">
-          <a href="index.html" class="navbar-item o-navigation-bar__logo">
-            <img src="assets/logo-base.svg" alt="Manuable Logo">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <i class="fas fa-bars fa-lg text-logo"></i>
-          </button>
-          <div class="col-md-6 col-12 offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              <a href="https://app.manuable.com/users/sign_up" class="btn btn-primary-manuable rounded-pill p-3 px-4 fs-4">Conecta tu negocio</a>
-            </div>
-            <div class="offcanvas-body">
-              <div class="collapse navbar-collapse ms-4 fs-5 d-none d-lg-block" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Testimonios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Beneficios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Servicios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">FAQs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
-                  </li>
-                </ul>
-              </div>
-              <ul class="navbar-nav flex-grow-1 flex-column-reverse flex-lg-row text-end">
-                <li class="nav-item my-auto me-lg-4 ms-lg-auto">
-                  <a href="https://app.manuable.com/" class="btn btn-secondary-manuable rounded p-3 px-4 fs-4 ms-3">Iniciar sesión</a>
+        swaper.style.transform = `translateX(${offset}px)`;
+        requestAnimationFrame(moveSwaper);
+      };
+
+      moveSwaper();
+    });
+  </script>
+
+  <!-- Hotjar Tracking Code for https://manuable.com/ -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 5158399, hjsv: 6 };
+      a = o.getElementsByTagName("head")[0];
+      r = o.createElement("script"); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+  </script>
+</head>
+
+<body class="position position-relative bg-white">
+  <main class="position-relative">
+    <header class="navbar navbar-fixed-top navbar-expand-lg py-2 card card-shadow mx-4 mt-3">
+      <div class="container-fluid col-12 fs-4 py-2 card-body">
+        <a href="index.html" class="navbar-item o-navigation-bar__logo">
+          <img src="assets/logo-base.svg" alt="Manuable Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <i class="fas fa-bars fa-lg text-logo"></i>
+        </button>
+        <div class="col-md-6 col-12 offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a href="https://app.manuable.com/users/sign_up"
+              class="btn btn-primary-manuable rounded-pill p-3 px-4 fs-4">Conecta tu negocio</a>
+          </div>
+          <div class="offcanvas-body">
+            <div class="collapse navbar-collapse ms-4 fs-5 d-none d-lg-block" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Testimonios</a>
                 </li>
-                <li class="nav-item d-none d-lg-block">
-                  <a href="https://app.manuable.com/users/sign_up" class="btn btn-primary-manuable rounded p-3 py-sm-3 px-4 fs-4">Conectar mi negocio</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Beneficios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
                 </li>
               </ul>
             </div>
+            <ul class="navbar-nav flex-grow-1 flex-column-reverse flex-lg-row text-end">
+              <li class="nav-item my-auto me-lg-4 ms-lg-auto">
+                <a href="https://app.manuable.com/"
+                  class="btn btn-secondary-manuable rounded p-3 px-4 fs-4 ms-3">Iniciar sesión</a>
+              </li>
+              <li class="nav-item d-none d-lg-block">
+                <a href="https://app.manuable.com/users/sign_up"
+                  class="btn btn-primary-manuable rounded p-3 py-sm-3 px-4 fs-4">Conectar mi negocio</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </header>
-      <section class="pt-5 bg-white" style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(221, 204, 249, 0.10) 49.1%, rgba(169, 127, 241, 0.25) 100%);">
-        <nav class="pt-5 mt-5 overflow-hidden">
-          <div class="container col-10 mt-5">
-            <div class="row row-cols-1 row-cols-xl-2 d-flex justify-content-center justify-content-xl-start g-5 position-relative">
-              <div class="col-12 col-md pe-lg-3 text-center text-xl-start p-0 pt-md-5">
-                <h1 class="fw-bolder text-h1 me-md-3 p-0">
-                  Facilita la logística de tu negocio y crece tus ventas
-                </h1>
-                <div class="pe-xl-3">
-                  <p class="me-xl-5 pe-xl-5 text-gray-p fs-4 my-4">Convierte tu negocio en una tienda en
-                    Integra tu ecommerce, aumenta tu eficiencia operativa, reduce costos, mejora la experiencia de tus clientes y enfócate en crecer tus ventas a través de tu logística con Manuable.
-                  </p>
-                </div>
-                <div class="mb-3">                
-                  <a href="https://app.manuable.com/users/sign_up" class="btn btn-primary-manuable rounded p-3 px-4 fs-5">Empezar ahora</a>
-                  <a href="https://api.whatsapp.com/send?phone=8131849121" class="btn btn-secondary-manuable rounded p-3 px-4 fs-5 ms-3">Quiero más información</a>
-                </div>
+      </div>
+    </header>
+    <section class="pt-5 bg-white"
+      style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(221, 204, 249, 0.10) 49.1%, rgba(169, 127, 241, 0.25) 100%);">
+      <nav class="pt-5 mt-5 overflow-hidden">
+        <div class="container col-10 mt-5">
+          <div
+            class="row row-cols-1 row-cols-xl-2 d-flex justify-content-center justify-content-xl-start g-5 position-relative">
+            <div class="col-12 col-md pe-lg-3 text-center text-xl-start p-0 pt-md-5">
+              <h1 class="fw-bolder text-h1 me-md-3 p-0">
+                Facilita la logística de tu negocio y crece tus ventas
+              </h1>
+              <div class="pe-xl-3">
+                <p class="me-xl-5 pe-xl-5 text-gray-p fs-4 my-4">Convierte tu negocio en una tienda en
+                  Integra tu ecommerce, aumenta tu eficiencia operativa, reduce costos, mejora la experiencia de tus
+                  clientes y enfócate en crecer tus ventas a través de tu logística con Manuable.
+                </p>
               </div>
-              <div class="col text-center mt-5 mt-xl-0 position-relative right-10">
-                <img src="assets/platform-example.png" class="d-sm-block d-none" alt="First Chat">
+              <div class="mb-3">
+                <a href="https://app.manuable.com/users/sign_up"
+                  class="btn btn-primary-manuable rounded p-3 px-4 fs-5">Empezar ahora</a>
+                <a href="https://api.whatsapp.com/send?phone=8131849121"
+                  class="btn btn-secondary-manuable rounded p-3 px-4 fs-5 ms-3">Quiero más información</a>
               </div>
             </div>
-          </div>
-        </nav>
-      </section>
-  
-      <section class="py-5 bg-white">
-        <div class="container-fluid col-11 col-lg-10 my-5">
-          <div class="card card-shadow-lg">
-            <div class="card-body py-5">
-              <h2 class="text-center mb-5">Conecta tus canales de venta y automatiza tu logística</h2>
-              <div class="swaper-wrapper">
-                <div class="swaper">
-                  <img src="assets/e-commerce/shopify.svg" class="img-fluid" alt="Shopify">
-                  <img src="assets/e-commerce/woocommerce.svg" class="img-fluid" alt="WooCommerce">
-                  <img src="assets/e-commerce/magento.svg" class="img-fluid" alt="Magento">
-                  <img src="assets/e-commerce/wix.svg" class="img-fluid" alt="Wix">
-                  <img src="assets/e-commerce/prestashop.svg" class="img-fluid" alt="Prestashop">
-                  <img src="assets/e-commerce/tiendanube.svg" class="img-fluid" alt="TiendaNube">
-                  <img src="assets/e-commerce/mercadolibre.svg" class="img-fluid" alt="MercadoLibre">
-                  <img src="assets/e-commerce/google_sheets.svg" class="img-fluid" alt="GoogleSheetts">
-                </div>
-              </div>
+            <div class="col text-center mt-5 mt-xl-0 position-relative right-10">
+              <img src="assets/platform-example.png" class="d-sm-block d-none" alt="First Chat">
             </div>
           </div>
         </div>
-      </section>    
-      
-      <section class="py-5 bg-white">
-        <div class="container">
-          <div class="row justify-content-between">
-            <!-- Texto de introducción -->
-            <div class="col-12 col-md-5">
-              <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Testimonios</h6>
-              <h2 class="fw-bolder text-h2">Explora Nuestras Historias de Éxito</h2>
-              <p class="mb-4 fs-4">
-                Inspírate con clientes que han alcanzado ahorro, eficiencia y crecimiento junto a nosotros.
-              </p>
-            </div>
-            <!-- Testimonio -->
-            <div class="col-12 col-md-5 position-relative">
-              <span class="position-absolute top-0 start-0 translate-middle p-2 ms-5" style="z-index: 100;">
-                <span class="text-h2 text-primary"><i class="fas fa-quote-left"></i></span>
-              </span>
-              <div class="card card-shadow-lg">
-                <div class="card-body p-4">
-                  <div id="carouselExampleCaptions" class="carousel slide carousel-fade h-100 position-relative" data-bs-ride="carousel">
-                    <div class="carousel-inner h-100">
-                      <div class="carousel-item active h-100 d-flex flex-column justify-content-between">
-                        <div class="">
-                          <p class="ms-2 mb-0 fs-4 gray-scale-800">
-                            Mi experiencia utilizando Manuable para mis envíos ha sido excelente. La plataforma es fácil de usar y me ha permitido gestionar mis pedidos de manera eficiente.
-                          </p>
-                        </div>
-                        <div class="d-flex align-items-center mt-5 justify-content-between">
-                          <div class="d-flex">
-                            <img src="assets/customer1.png" alt="Ana García" class="rounded-circle me-3" style="width: 50px;height: 50px;">
-                            <div>
-                              <p class="fs-5 fw-bolder mb-0 gray-scale-900">Ana García Chavez</p>
-                              <p class="text-sm">Tienda de productos artesanales</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item h-100 d-flex flex-column justify-content-between">
-                        <div class="">
-                          <p class="ms-2 mb-0 fs-4 gray-scale-800">
-                            Como propietaria de una tienda en línea de productos de belleza, necesito asegurarme que mis clientes reciban sus productos de manera rápida y segura. Manuable me ha brindado una plataforma fácil de usar.
-                          </p>
-                        </div>
-                        <div class="d-flex align-items-center mt-3 justify-content-between">
-                          <div class="d-flex">
-                            <img src="assets/customer2.png" alt="Ana García" class="rounded-circle me-3" style="width: 50px;height: 50px;">
-                            <div>
-                              <p class="fs-5 fw-bolder mb-0 gray-scale-900">Gabriela Martínez</p>
-                              <p class="text-sm">Tienda en línea de productos de belleza</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="carousel-item h-100 d-flex flex-column justify-content-between">
-                        <div class="">
-                          <p class="ms-2 mb-0 fs-4 gray-scale-800">
-                            ¡Mi experiencia ha sido increíblemente emocionante! Esta plataforma ha sido mi compañera de confianza en el emocionante mundo de los envíos. Desde el primer día, me encantó lo fácil que es de usar.
-                          </p>
-                        </div>
-                        <div class="d-flex align-items-center mt-3 justify-content-between">
-                          <div class="d-flex">
-                            <img src="assets/customer3.png" alt="Ana García" class="rounded-circle me-3" style="width: 50px;height: 50px;">
-                            <div>
-                              <p class="fs-5 fw-bolder mb-0 gray-scale-900">Carolina Rodríguez</p>
-                              <p class="text-sm">Venta en línea de termos</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="d-flex mt-3 position-absolute bottom-0 end-0 mb-3" style="z-index: 100;">
-                      <button class="me-2 btn btn-primary-manuable rounded-pill p-2 text-sm" style="width: 2.5rem; height: 2.5rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev"><i class="fas fa-chevron-left"></i></button>
-                      <button class="me-2 btn btn-primary-manuable rounded-pill p-2 text-sm" style="width: 2.5rem; height: 2.5rem;" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                  </div>
-                </div>
+      </nav>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container-fluid col-11 col-lg-10 my-5">
+        <div class="card card-shadow-lg">
+          <div class="card-body py-5">
+            <h2 class="text-center mb-5">Conecta tus canales de venta y automatiza tu logística</h2>
+            <div class="swaper-wrapper">
+              <div class="swaper">
+                <img src="assets/e-commerce/shopify.svg" class="img-fluid" alt="Shopify">
+                <img src="assets/e-commerce/woocommerce.svg" class="img-fluid" alt="WooCommerce">
+                <img src="assets/e-commerce/magento.svg" class="img-fluid" alt="Magento">
+                <img src="assets/e-commerce/wix.svg" class="img-fluid" alt="Wix">
+                <img src="assets/e-commerce/prestashop.svg" class="img-fluid" alt="Prestashop">
+                <img src="assets/e-commerce/tiendanube.svg" class="img-fluid" alt="TiendaNube">
+                <img src="assets/e-commerce/mercadolibre.svg" class="img-fluid" alt="MercadoLibre">
+                <img src="assets/e-commerce/google_sheets.svg" class="img-fluid" alt="GoogleSheetts">
               </div>
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="py-5 mt-5 bg-white position-relative">
-        <div class="container ">
-          <div class="row">
-            <img src="assets/ribbon.png" class="top-50 start-50 translate-middle d-none d-md-block" style="position: absolute; max-width: 100%; pointer-events: none;" alt="Gradient">
-            <div class="col-12 d-flex align-items-center flex-column">
-              <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Beneficios</h6>
-              <h2 class="fw-bolder text-h2">Facilitamos la logística e impulsamos el crecimiento de tu negocio</h2>
-            </div>
-            <div class="col-12 my-5 py-5">
-              <div class="card-group text-center flex-column flex-lg-row">
-                <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
-                  <img src="assets/calculator.png" alt="Ana García" class="rounded me-3">
-                  <div class="card-body p-0">
-                    <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Reducimos costos logísticos</h5>
-                    <p class="mb-0">Te ayudamos a ahorrar en cada envío, ofreciendo tarifas competitivas.</p>
-                  </div>
-                </div>
-                <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
-                  <img src="assets/clock.png" alt="Ana García" class="rounded me-3">
-                  <div class="card-body p-0">
-                    <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Facilitamos en tiempo</h5>
-                    <p class="mb-0">Simplifica el proceso logístico y optimiza la operación de tu equipo.</p>
-                  </div>
-                </div>
-                <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
-                  <img src="assets/innovation.png" alt="Ana García" class="rounded me-3">
-                  <div class="card-body p-0">
-                    <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Innovamos tus procesos</h5>
-                    <p class="mb-0">Nos enfocamos en automatizar tareas complejas y procesos logísticos.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- Texto de introducción -->
+          <div class="col-12 col-md-5">
+            <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Testimonios</h6>
+            <h2 class="fw-bolder text-h2">Explora Nuestras Historias de Éxito</h2>
+            <p class="mb-4 fs-4">
+              Inspírate con clientes que han alcanzado ahorro, eficiencia y crecimiento junto a nosotros.
+            </p>
           </div>
-        </div>
-      </section>
-  
-      <section class="py-5">
-        <div class="container-fluid col-11 col-lg-10 my-5">
-          <div class="row align-items-center d-flex">
-            <div class="col-12 d-flex align-items-center flex-column mb-5 pb-5">
-              <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Servicios</h6>
-              <h2 class="fw-bolder text-h2">La plataforma logística perfecta para escalar tu negocio</h2>
-            </div>
-            <div id="carouselExampleIndicators" class="carousel slide carousel-fade col d-flex justify-content-center" data-bs-ride="carousel">
-              <div class="col-12 col-md-5 text-center mt-5 mt-lg-0">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="assets/ecommerce-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/quote-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/pickup-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/location-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 position-relative text-primary align-items-center d-flex">
-                <div class="carousel-indicators d-flex flex-column align-items-start position-relative">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 position-relative active" aria-current="true" aria-label="Slide 1">
-                    <div class="alert alert-icon mb-0" role='alert'>
-                      <span class="border-alert-info"></span>
-                      <div class="alert-icon-content py-2 text-start">
-                        <div class="d-flex">
-                          <img src="assets/icons/shop.svg" alt="shop" style="width: 30px;" class="me-2">
-                          <p class="mb-0 fs-4 fw-bolder">Integra tus canales de venta</p>
-                        </div>
-                        <div class="collapse show" data-custom-target="collapseExample">
-                          <div class="gray-scale-700">
-                            Manuable monitorea cada paquete en tiempo real, enviándote actualizaciones precisas y alertas automáticas en cada etapa del envío.
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 2">
-                    <div class="alert alert-icon mb-0" role='alert'>
-                      <span class="border-alert-info"></span>
-                      <div class="alert-icon-content py-2 text-start">
-                        <div class="d-flex">
-                          <img src="assets/icons/truck.svg" alt="shop" style="width: 30px;" class="me-2">
-                          <p class="mb-0 fs-4 fw-bolder">Elige la mejor opción de envío</p>
-                        </div>
-                        <div class="collapse" data-custom-target="collapseExample">
-                          <div class="gray-scale-700">
-                            Compara servicios y cotiza precios. Selecciona la mejor opción para tus necesidades.
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 3">
-                    <div class="alert alert-icon mb-0" role='alert'>
-                      <span class="border-alert-info"></span>
-                      <div class="alert-icon-content py-2 text-start">
-                        <div class="d-flex">
-                          <img src="assets/icons/package.svg" alt="shop" style="width: 30px;" class="me-2">
-                          <p class="mb-0 fs-4 fw-bolder">Imprime, recolecta y envía</p>
-                        </div>
-                        <div class="collapse" data-custom-target="collapseExample">
-                          <div class="gray-scale-700">
-                            Imprime tus guías y agenda tu recolección desde nuestra plataforma.
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 3">
-                    <div class="alert alert-icon mb-0" role='alert'>
-                      <span class="border-alert-info"></span>
-                      <div class="alert-icon-content py-2 text-start">
-                        <div class="d-flex">
-                          <img src="assets/icons/tracking2.svg" alt="shop" style="width: 30px;" class="me-2">
-                          <p class="mb-0 fs-4 fw-bolder">Rastrea y notifica a tus clientes</p>
-                        </div>
-                        <div class="collapse" data-custom-target="collapseExample">
-                          <div class="gray-scale-700">
-                            Personaliza tu página de rastreo y envía notificaciones a tus clientes en cada paso.
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-  
-      <section class="pt-5 mt-5 bg-white position-relative">
-        <div class="position-absolute top-0 start-0 w-100" style="margin-top: 280px; height: 85%;">
-          <img src="assets/gradients-light.png" class="w-100 h-100" alt="Gradient">
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 d-flex align-items-start flex-column position-relative">
-              <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Plataforma</h6>
-              <h2 class="fw-bolder text-h2">Descubre nuestras funcionalidades  que te ayudan a optimizar tus procesos logísticos</h2>
-            </div>
-            <div class="col-12 my-5 py-5">
-              <div class="row g-4">
-                <div class="col-12 col-md-6 h-auto">
-                  <div class="card card-shadow-lg h-100" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
-                    <div class="card-body p-4 mb-5">
-                      <img src="assets/icons/calc.svg" alt="calc" style="width: 30px;" class="mb-3">
-                      <h5 class="card-title gray-scale-800 fw-bolder fs-3">Multicotizador de envíos</h5>
-                      <p class="card-text">Compara y cotiza rápidamente diferentes opciones de paqueterías ingresando datos clave de forma manual, ideal para seleccionar la mejor oferta en servicios de envíos.</p>
-                    </div>
-                    <div class="px-4 w-100">
-                      <img src="assets/cotizador.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 h-auto">
-                  <div class="card card-shadow-lg h-100" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
-                    <div class="card-body p-4 mb-5">
-                      <img src="assets/icons/file.svg" alt="file" style="width: 30px;" class="mb-3">
-                      <h5 class="card-title gray-scale-800 fw-bolder fs-3">Multiguías</h5>
-                      <p class="card-text">Genera múltiples etiquetas de envío en una sola transacción, simplificando y agilizando la gestión de envíos en gran volumen.</p>
-                    </div>
-                    <div class="px-4 w-100">
-                      <img src="assets/recolecciones.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 h-auto">
-                  <div class="card card-shadow-lg h-100" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
-                    <div class="card-body p-4 mb-5">
-                      <img src="assets/icons/tracking.svg" alt="tracking" style="width: 30px;" class="mb-3">
-                      <h5 class="card-title gray-scale-800 fw-bolder fs-3">Rastreo personalizado</h5>
-                      <p class="card-text">Envía y recibe notificaciones de envíos en cada etapa del proceso de envío, mejorando la transparencia y la experiencia del usuario. Puedes tener tu propia página de rastreo brandeada con tu marca.</p>
-                    </div>
-                    <div class="px-4 w-100">
-                      <img src="assets/rastreo.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 h-auto">
-                  <div class="card card-shadow-lg h-100" style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
-                    <div class="card-body p-4 mb-5">
-                      <img src="assets/icons/monitor.svg" alt="monitor" style="width: 30px;" class="mb-3">
-                      <h5 class="card-title gray-scale-800 fw-bolder fs-3">Integraciones</h5>
-                      <p class="card-text">Centraliza tus pedidos en una plataforma e integra cualquiera de tus canales de ventas para automatizar y optimizar todo tu proceso logístico.</p>
-                    </div>
-                    <div class="px-4 w-100">
-                      <img src="assets/e-commerce.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="card card-shadow-lg">
-                    <div class="row p-4 justify-content-between">
-                      <div class="mb-5 col-12 col-md-5 d-flex justify-content-center flex-column">
-                        <img src="assets/icons/dev.svg" alt="dev" style="width: 30px;" class="mb-3">
-                        <h5 class="card-title gray-scale-800 fw-bolder fs-3">Integración con nuestra API</h5>
-                        <p class="card-text">
-                          Nuestra API permite conectar tu negocio con nuestras herramientas de envío y seguimiento de manera rápida y sencilla, optimizando tu flujo de trabajo y brindándote control absoluto en una sola plataforma.
+          <!-- Testimonio -->
+          <div class="col-12 col-md-5 position-relative">
+            <span class="position-absolute top-0 start-0 translate-middle p-2 ms-5" style="z-index: 100;">
+              <span class="text-h2 text-primary"><i class="fas fa-quote-left"></i></span>
+            </span>
+            <div class="card card-shadow-lg">
+              <div class="card-body p-4">
+                <div id="carouselExampleCaptions" class="carousel slide carousel-fade h-100 position-relative"
+                  data-bs-ride="carousel">
+                  <div class="carousel-inner h-100">
+                    <div class="carousel-item active h-100 d-flex flex-column justify-content-between">
+                      <div class="">
+                        <p class="ms-2 mb-0 fs-4 gray-scale-800">
+                          Mi experiencia utilizando Manuable para mis envíos ha sido excelente. La plataforma es fácil
+                          de usar y me ha permitido gestionar mis pedidos de manera eficiente.
                         </p>
-                        <a href="https://api.whatsapp.com/send?phone=8131849121" target="_blank" class="btn btn-primary-manuable rounded p-3 px-4 fs-5 w-fit">Quiero saber más</a>
                       </div>
-                      <div class="col-12 col-md-5 justify-content-center d-flex">
-                        <img src="assets/api-mockup.png" alt="Ana García" class="rounded me-md-3" style="width: 300px; ">
+                      <div class="d-flex align-items-center mt-5 justify-content-between">
+                        <div class="d-flex">
+                          <img src="assets/customer1.png" alt="Ana García" class="rounded-circle me-3"
+                            style="width: 50px;height: 50px;">
+                          <div>
+                            <p class="fs-5 fw-bolder mb-0 gray-scale-900">Ana García Chavez</p>
+                            <p class="text-sm">Tienda de productos artesanales</p>
+                          </div>
+                        </div>
                       </div>
+                    </div>
+                    <div class="carousel-item h-100 d-flex flex-column justify-content-between">
+                      <div class="">
+                        <p class="ms-2 mb-0 fs-4 gray-scale-800">
+                          Como propietaria de una tienda en línea de productos de belleza, necesito asegurarme que mis
+                          clientes reciban sus productos de manera rápida y segura. Manuable me ha brindado una
+                          plataforma fácil de usar.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mt-3 justify-content-between">
+                        <div class="d-flex">
+                          <img src="assets/customer2.png" alt="Ana García" class="rounded-circle me-3"
+                            style="width: 50px;height: 50px;">
+                          <div>
+                            <p class="fs-5 fw-bolder mb-0 gray-scale-900">Gabriela Martínez</p>
+                            <p class="text-sm">Tienda en línea de productos de belleza</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item h-100 d-flex flex-column justify-content-between">
+                      <div class="">
+                        <p class="ms-2 mb-0 fs-4 gray-scale-800">
+                          ¡Mi experiencia ha sido increíblemente emocionante! Esta plataforma ha sido mi compañera de
+                          confianza en el emocionante mundo de los envíos. Desde el primer día, me encantó lo fácil que
+                          es de usar.
+                        </p>
+                      </div>
+                      <div class="d-flex align-items-center mt-3 justify-content-between">
+                        <div class="d-flex">
+                          <img src="assets/customer3.png" alt="Ana García" class="rounded-circle me-3"
+                            style="width: 50px;height: 50px;">
+                          <div>
+                            <p class="fs-5 fw-bolder mb-0 gray-scale-900">Carolina Rodríguez</p>
+                            <p class="text-sm">Venta en línea de termos</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-3 position-absolute bottom-0 end-0 mb-3" style="z-index: 100;">
+                    <button class="me-2 btn btn-primary-manuable rounded-pill p-2 text-sm"
+                      style="width: 2.5rem; height: 2.5rem;" data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="me-2 btn btn-primary-manuable rounded-pill p-2 text-sm"
+                      style="width: 2.5rem; height: 2.5rem;" data-bs-target="#carouselExampleCaptions"
+                      data-bs-slide="next"><i class="fas fa-chevron-right"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 mt-5 bg-white position-relative">
+      <div class="container ">
+        <div class="row">
+          <img src="assets/ribbon.png" class="top-50 start-50 translate-middle d-none d-md-block"
+            style="position: absolute; max-width: 100%; pointer-events: none;" alt="Gradient">
+          <div class="col-12 d-flex align-items-center flex-column">
+            <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Beneficios</h6>
+            <h2 class="fw-bolder text-h2">Facilitamos la logística e impulsamos el crecimiento de tu negocio</h2>
+          </div>
+          <div class="col-12 my-5 py-5">
+            <div class="card-group text-center flex-column flex-lg-row">
+              <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
+                <img src="assets/calculator.png" alt="Ana García" class="rounded me-3">
+                <div class="card-body p-0">
+                  <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Reducimos costos logísticos</h5>
+                  <p class="mb-0">Te ayudamos a ahorrar en cada envío, ofreciendo tarifas competitivas.</p>
+                </div>
+              </div>
+              <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
+                <img src="assets/clock.png" alt="Ana García" class="rounded me-3">
+                <div class="card-body p-0">
+                  <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Facilitamos en tiempo</h5>
+                  <p class="mb-0">Simplifica el proceso logístico y optimiza la operación de tu equipo.</p>
+                </div>
+              </div>
+              <div class="card p-5 mx-md-4 mt-0 my-lg-0 position-relative bg-transparent">
+                <img src="assets/innovation.png" alt="Ana García" class="rounded me-3">
+                <div class="card-body p-0">
+                  <h5 class="mt-3 fs-2 fw-bolder gray-scale-900">Innovamos tus procesos</h5>
+                  <p class="mb-0">Nos enfocamos en automatizar tareas complejas y procesos logísticos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container-fluid col-11 col-lg-10 my-5">
+        <div class="row align-items-center d-flex">
+          <div class="col-12 d-flex align-items-center flex-column mb-5 pb-5">
+            <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Servicios</h6>
+            <h2 class="fw-bolder text-h2">La plataforma logística perfecta para escalar tu negocio</h2>
+          </div>
+          <div id="carouselExampleIndicators" class="carousel slide carousel-fade col d-flex justify-content-center"
+            data-bs-ride="carousel">
+            <div class="col-12 col-md-5 text-center mt-5 mt-lg-0">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/ecommerce-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/quote-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/pickup-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/location-mockup.png" alt="Ana García" class="rounded me-3 d-block w-100">
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 position-relative text-primary align-items-center d-flex">
+              <div class="carousel-indicators d-flex flex-column align-items-start position-relative">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                  style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 position-relative active"
+                  aria-current="true" aria-label="Slide 1">
+                  <div class="alert alert-icon mb-0" role='alert'>
+                    <span class="border-alert-info"></span>
+                    <div class="alert-icon-content py-2 text-start">
+                      <div class="d-flex">
+                        <img src="assets/icons/shop.svg" alt="shop" style="width: 30px;" class="me-2">
+                        <p class="mb-0 fs-4 fw-bolder">Integra tus canales de venta</p>
+                      </div>
+                      <div class="collapse show" data-custom-target="collapseExample">
+                        <div class="gray-scale-700">
+                          Manuable monitorea cada paquete en tiempo real, enviándote actualizaciones precisas y alertas
+                          automáticas en cada etapa del envío.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 2">
+                  <div class="alert alert-icon mb-0" role='alert'>
+                    <span class="border-alert-info"></span>
+                    <div class="alert-icon-content py-2 text-start">
+                      <div class="d-flex">
+                        <img src="assets/icons/truck.svg" alt="shop" style="width: 30px;" class="me-2">
+                        <p class="mb-0 fs-4 fw-bolder">Elige la mejor opción de envío</p>
+                      </div>
+                      <div class="collapse" data-custom-target="collapseExample">
+                        <div class="gray-scale-700">
+                          Compara servicios y cotiza precios. Selecciona la mejor opción para tus necesidades.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 3">
+                  <div class="alert alert-icon mb-0" role='alert'>
+                    <span class="border-alert-info"></span>
+                    <div class="alert-icon-content py-2 text-start">
+                      <div class="d-flex">
+                        <img src="assets/icons/package.svg" alt="shop" style="width: 30px;" class="me-2">
+                        <p class="mb-0 fs-4 fw-bolder">Imprime, recolecta y envía</p>
+                      </div>
+                      <div class="collapse" data-custom-target="collapseExample">
+                        <div class="gray-scale-700">
+                          Imprime tus guías y agenda tu recolección desde nuestra plataforma.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  style="text-indent: 0;" class="h-auto w-auto bg-transparent py-2 " aria-label="Slide 3">
+                  <div class="alert alert-icon mb-0" role='alert'>
+                    <span class="border-alert-info"></span>
+                    <div class="alert-icon-content py-2 text-start">
+                      <div class="d-flex">
+                        <img src="assets/icons/tracking2.svg" alt="shop" style="width: 30px;" class="me-2">
+                        <p class="mb-0 fs-4 fw-bolder">Rastrea y notifica a tus clientes</p>
+                      </div>
+                      <div class="collapse" data-custom-target="collapseExample">
+                        <div class="gray-scale-700">
+                          Personaliza tu página de rastreo y envía notificaciones a tus clientes en cada paso.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-5 mt-5 bg-white position-relative">
+      <div class="position-absolute top-0 start-0 w-100" style="margin-top: 280px; height: 85%;">
+        <img src="assets/gradients-light.png" class="w-100 h-100" alt="Gradient">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex align-items-start flex-column position-relative">
+            <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Plataforma</h6>
+            <h2 class="fw-bolder text-h2">Descubre nuestras funcionalidades  que te ayudan a optimizar tus procesos
+              logísticos</h2>
+          </div>
+          <div class="col-12 my-5 py-5">
+            <div class="row g-4">
+              <div class="col-12 col-md-6 h-auto">
+                <div class="card card-shadow-lg h-100"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
+                  <div class="card-body p-4 mb-5">
+                    <img src="assets/icons/calc.svg" alt="calc" style="width: 30px;" class="mb-3">
+                    <h5 class="card-title gray-scale-800 fw-bolder fs-3">Multicotizador de envíos</h5>
+                    <p class="card-text">Compara y cotiza rápidamente diferentes opciones de paqueterías ingresando
+                      datos clave de forma manual, ideal para seleccionar la mejor oferta en servicios de envíos.</p>
+                  </div>
+                  <div class="px-4 w-100">
+                    <img src="assets/cotizador.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 h-auto">
+                <div class="card card-shadow-lg h-100"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
+                  <div class="card-body p-4 mb-5">
+                    <img src="assets/icons/file.svg" alt="file" style="width: 30px;" class="mb-3">
+                    <h5 class="card-title gray-scale-800 fw-bolder fs-3">Multiguías</h5>
+                    <p class="card-text">Genera múltiples etiquetas de envío en una sola transacción, simplificando y
+                      agilizando la gestión de envíos en gran volumen.</p>
+                  </div>
+                  <div class="px-4 w-100">
+                    <img src="assets/recolecciones.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 h-auto">
+                <div class="card card-shadow-lg h-100"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
+                  <div class="card-body p-4 mb-5">
+                    <img src="assets/icons/tracking.svg" alt="tracking" style="width: 30px;" class="mb-3">
+                    <h5 class="card-title gray-scale-800 fw-bolder fs-3">Rastreo personalizado</h5>
+                    <p class="card-text">Envía y recibe notificaciones de envíos en cada etapa del proceso de envío,
+                      mejorando la transparencia y la experiencia del usuario. Puedes tener tu propia página de rastreo
+                      brandeada con tu marca.</p>
+                  </div>
+                  <div class="px-4 w-100">
+                    <img src="assets/rastreo.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 h-auto">
+                <div class="card card-shadow-lg h-100"
+                  style="background: linear-gradient(0deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.75) 100%);">
+                  <div class="card-body p-4 mb-5">
+                    <img src="assets/icons/monitor.svg" alt="monitor" style="width: 30px;" class="mb-3">
+                    <h5 class="card-title gray-scale-800 fw-bolder fs-3">Integraciones</h5>
+                    <p class="card-text">Centraliza tus pedidos en una plataforma e integra cualquiera de tus canales de
+                      ventas para automatizar y optimizar todo tu proceso logístico.</p>
+                  </div>
+                  <div class="px-4 w-100">
+                    <img src="assets/e-commerce.png" alt="Ana García" class="rounded w-100" style="height: 300px;">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="card card-shadow-lg">
+                  <div class="row p-4 justify-content-between">
+                    <div class="mb-5 col-12 col-md-5 d-flex justify-content-center flex-column">
+                      <img src="assets/icons/dev.svg" alt="dev" style="width: 30px;" class="mb-3">
+                      <h5 class="card-title gray-scale-800 fw-bolder fs-3">Integración con nuestra API</h5>
+                      <p class="card-text">
+                        Nuestra API permite conectar tu negocio con nuestras herramientas de envío y seguimiento de
+                        manera rápida y sencilla, optimizando tu flujo de trabajo y brindándote control absoluto en una
+                        sola plataforma.
+                      </p>
+                      <a href="https://api.whatsapp.com/send?phone=8131849121" target="_blank"
+                        class="btn btn-primary-manuable rounded p-3 px-4 fs-5 w-fit">Quiero saber más</a>
+                    </div>
+                    <div class="col-12 col-md-5 justify-content-center d-flex">
+                      <img src="assets/api-mockup.png" alt="Ana García" class="rounded me-md-3" style="width: 300px; ">
                     </div>
                   </div>
                 </div>
@@ -489,96 +544,137 @@
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="py-5 align-items-center mt-5">
-        <div class="container my-5">
-          <div class="row align-items-center">
-            <div class="col-12 d-flex align-items-start flex-column position-relative">
-              <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Plataforma</h6>
-              <h2 class="fw-bolder text-h2">Descubre nuestras funcionalidades  que te ayudan a optimizar tus procesos logísticos</h2>
-            </div>
-            <div class="col-12 mt-5 py-5">
-              <div class="accordion accordion-flush row g-3 justify-content-between row-cols-2" id="accordionFlushExample">
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingOne">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        ¿Qué es Manuable?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Manuable es un servicio logístico que cuenta con una plataforma integral para gestionar tus envíos de manera sencilla. Te permite cotizar, rastrear y optimizar tus envíos en un solo lugar, ahorrándote tiempo y costos.</div>
+      </div>
+    </section>
+
+    <section class="py-5 align-items-center mt-5">
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <div class="col-12 d-flex align-items-start flex-column position-relative">
+            <h6 class="text-uppercase fw-bold btn btn-secondary-manuable py-2 mb-3">Plataforma</h6>
+            <h2 class="fw-bolder text-h2">Descubre nuestras funcionalidades  que te ayudan a optimizar tus procesos
+              logísticos</h2>
+          </div>
+          <div class="col-12 mt-5 py-5">
+            <div class="accordion accordion-flush row g-3 justify-content-between row-cols-2"
+              id="accordionFlushExample">
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingOne">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      ¿Qué es Manuable?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Manuable es un servicio logístico que cuenta con una plataforma integral
+                      para gestionar tus envíos de manera sencilla. Te permite cotizar, rastrear y optimizar tus envíos
+                      en un solo lugar, ahorrándote tiempo y costos.</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingTwo">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      ¿Cómo puedo conectar mi tienda en línea a Manuable?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Accede a nuestra plataforma e ingresa al apartado de E- Commerce, selecciona la tienda que desees
+                      conectar e ingresa tus datos de acceso para permitir la integración. Manuable sincronizará
+                      automáticamente tus pedidos y productos, facilitando la gestión de envíos y actualizaciones de
+                      inventario en tiempo real. Así, puedes centralizar tus procesos de venta y envío sin
+                      complicaciones adicionales.
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingTwo">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        ¿Cómo puedo conectar mi tienda en línea a Manuable?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Accede a nuestra plataforma e ingresa al apartado de E- Commerce, selecciona la tienda que desees conectar e ingresa tus datos de acceso para permitir la integración. Manuable sincronizará automáticamente tus pedidos y productos, facilitando la gestión de envíos y actualizaciones de inventario en tiempo real. Así, puedes centralizar tus procesos de venta y envío sin complicaciones adicionales.
-                      </div>
+              </div>
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingThree">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      ¿Cómo funciona la cotización de envíos?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Con Manuable, cotizar tus envíos es rápido y sencillo. Solo necesitas ingresar los detalles del
+                      paquete, como origen, destino, peso y dimensiones. A partir de esta información, la plataforma te
+                      mostrará una lista de tarifas de distintas paqueterías con sus respectivos precios y tiempos de
+                      entrega. Así, podrás comparar opciones y elegir la que mejor se ajuste a tus necesidades y
+                      presupuesto.
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingThree">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        ¿Cómo funciona la cotización de envíos?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Con Manuable, cotizar tus envíos es rápido y sencillo. Solo necesitas ingresar los detalles del paquete, como origen, destino, peso y dimensiones. A partir de esta información, la plataforma te mostrará una lista de tarifas de distintas paqueterías con sus respectivos precios y tiempos de entrega. Así, podrás comparar opciones y elegir la que mejor se ajuste a tus necesidades y presupuesto.
-                      </div>
+              </div>
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingFour">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      ¿Qué métodos de pago aceptan para recargar saldo en mi cuenta?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Aceptamos pagos en OXXO, Paypal, Banregio y por medio de transferencias electrónicas. Además,
+                      mostramos un desglose de las comisiones según el método que elijas, para que siempre tengas
+                      claridad en tus pagos.
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingFour">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                        ¿Qué métodos de pago aceptan para recargar saldo en mi cuenta?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Aceptamos pagos en OXXO, Paypal, Banregio y por medio de transferencias electrónicas. Además, mostramos un desglose de las comisiones según el método que elijas, para que siempre tengas claridad en tus pagos.
-                      </div>
+              </div>
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingFive">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      ¿Es gratuito el servicio de Manuable?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Manuable es totalmente gratuito y no requiere costos de suscripción ni tarifas ocultas para
+                      utilizar su plataforma. Nuestro objetivo es facilitar la gestión de envíos para que puedas
+                      concentrarte en hacer crecer tu negocio, sin preocupaciones ni gastos adicionales.
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingFive">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                        ¿Es gratuito el servicio de Manuable?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Manuable es totalmente gratuito y no requiere costos de suscripción ni tarifas ocultas para utilizar su plataforma. Nuestro objetivo es facilitar la gestión de envíos para que puedas concentrarte en hacer crecer tu negocio, sin preocupaciones ni gastos adicionales.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="accordion-item bg-light rounded border-0 h-fit">
-                    <h2 class="accordion-header border-0" id="flush-headingSix">
-                      <button class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4" style="color: #495057 !important;" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                        ¿Cómo puedo obtener soporte o resolver dudas sobre la plataforma?
-                      </button>
-                    </h2>
-                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">
-                        Contamos con un equipo de soporte disponible para ayudarte. Puedes comunicarte a través de Whatsapp o correo electrónico.
-                      </div>
+              </div>
+              <div class="col">
+                <div class="accordion-item bg-light rounded border-0 h-fit">
+                  <h2 class="accordion-header border-0" id="flush-headingSix">
+                    <button
+                      class="accordion-button collapsed shadow-none bg-transparent text-decoration-none fw-bolder fs-4"
+                      style="color: #495057 !important;" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      ¿Cómo puedo obtener soporte o resolver dudas sobre la plataforma?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      Contamos con un equipo de soporte disponible para ayudarte. Puedes comunicarte a través de
+                      Whatsapp o correo electrónico.
                     </div>
                   </div>
                 </div>
@@ -586,197 +682,208 @@
             </div>
           </div>
         </div>
-      </section>
-  
-      <section class="py-5 bg-white">
-        <div class="container col-12 position-relative my-5">
-          <div class="card bg-indigo" style="background: linear-gradient(90deg, #A97FF1 0%, #6621DD 100%); border-radius: 15px; padding: 2rem; overflow: hidden;">
-            <div class="card-body">
-              <img src="assets/bg-map.png" class="" style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%); opacity: 0.2; max-width: 45%; pointer-events: none;" alt="Gradient">
-              <div class="row align-items-center g-3 justify-content-center position-relative">
-                <div class="col-10 text-center">
-                  <h2 class="fw-bolder text-h1 text-white me-md-2">Te ayudamos a expandir tu negocio en <span style="color: #EAEA49;">Estados Unidos</span></h2>
-                </div>
-                <div class="col-8 text-center">
-                  <p class="fs-4 text-white my-3">
-                    A través de nosotros, puedes expandir tu presencia hasta los Estados Unidos.
-                    Nuestro equipo te proporcionará el apoyo necesario para ampliar tus oportunidades comerciales y posicionar tu marca.
-                  </p>
-                  <a href="https://app.manuable.com/users/sign_up" class="btn btn-secondary-manuable mt-3 rounded px-4 fs-4">Contactar un asesor</a>
-                </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container col-12 position-relative my-5">
+        <div class="card bg-indigo"
+          style="background: linear-gradient(90deg, #A97FF1 0%, #6621DD 100%); border-radius: 15px; padding: 2rem; overflow: hidden;">
+          <div class="card-body">
+            <img src="assets/bg-map.png" class=""
+              style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%); opacity: 0.2; max-width: 45%; pointer-events: none;"
+              alt="Gradient">
+            <div class="row align-items-center g-3 justify-content-center position-relative">
+              <div class="col-10 text-center">
+                <h2 class="fw-bolder text-h1 text-white me-md-2">Te ayudamos a expandir tu negocio en <span
+                    style="color: #EAEA49;">Estados Unidos</span></h2>
               </div>
-            </div>
+              <div class="col-8 text-center">
+                <p class="fs-4 text-white my-3">
+                  A través de nosotros, puedes expandir tu presencia hasta los Estados Unidos.
+                  Nuestro equipo te proporcionará el apoyo necesario para ampliar tus oportunidades comerciales y
+                  posicionar tu marca.
+                </p>
+                <a href="https://app.manuable.com/users/sign_up"
+                  class="btn btn-secondary-manuable mt-3 rounded px-4 fs-4">Contactar un asesor</a>
+              </div>
             </div>
           </div>
-      </section>
-  
-      <footer class="footer mt-auto py-5 bg-white">
-        <div class="container-fluid col-12 col-md-10 my-5">
-          <section class="row g-5 justify-content-center">
-            <article class="col-11 col-md-4 text-center text-md-start">
-              <h3 class="fs-2 fw-bolder mb-3">Links</h3>
-              <div class="gray-scale-800">
-                <p>Testimonios</p>
-                <p>Beneficios</p>
-                <p>Servicios</p>
-                <p>FAQ's</p>
-                <p class="d-none">Blog</p>
-              </div>
-            </article>
-            <article class="col-6 col-md-4 d-flex align-items-center flex-column">
-              <div class="d-flex flex-column align-items-start">
-                <h4 class="fw-bolder mb-3">Empresa</h4>
-                <a href="https://app.manuable.com/jobs/new" class="gray-scale-800 mb-3" target="_blank">Bolsa de empleo</a>
-                <a href="https://drive.google.com/file/d/1y7jWADQ8F9SP0GfUz4AcqxMDmy5WE7QL/view" class="gray-scale-800 mb-3" target="_blank">Aviso de privacidad</a>
-                <a href="https://drive.google.com/file/d/1k65RCvJ6-wgTFwu82U_IKWgJk_FIWEzz/view" class="gray-scale-800 mb-3" target="_blank">Términos y condiciones</a>
-                <a href="https://drive.google.com/file/d/1QF3fyJqPHnVupSg6A-muzB9CabrdVFlY/view?usp=sharing" class="gray-scale-800 mb-3" target="_blank">Políticas de seguro de Manuable</a>
-              </div>
-            </article>
-            <article class="col-6 col-md-4 d-flex align-items-center flex-column">
-              <div class="d-flex flex-column align-items-start">
-                <h4 class="fw-bolder mb-3">Contacto</h4>
-                <p>Av Paseo de los Leones 267, Mitras Centro, 64460 Monterrey, N.L.</p>
-                <p>contacto@manuable.com</p>
-              </div>
-            </article>
-            <article class="col-12 mt-3">
-              <hr class="my-5 bg-black">
-              <div class="d-flex align-items-center justify-content-between">
-                <img src="assets/logo-base.svg" alt="Manuable Logo">
-                <p class="gray-scale-800 mb-0">© 2025 Manuable. Todos los derechos reservados.</p>
-                <div>
-                  <a class="text-primary me-1" href="https://www.instagram.com/manuable" target="_blank">
-                    <img src="assets/icons/instagram.svg" alt="instagram" style="width: 25px;">
-                  </a>
-                  <a class="text-primary me-1" href="https://facebook.com/manuable/" target="_blank">
-                    <img src="assets/icons/facebook.svg" alt="Facebook" style="width: 25px;">
-                  </a>
-                  <a class="text-primary me-1" href="https://www.linkedin.com/company/manuable/" target="_blank">
-                    <img src="assets/icons/linkedin.svg" alt="tiktok" style="width: 25px;">
-                  </a>
-                  <a class="text-primary me-1" href="https://www.tiktok.com/@manuable" target="_blank">
-                    <img src="assets/icons/tiktok.svg" alt="tiktok" style="width: 25px;">
-                  </a>
-                </div>
-              </div>
-            </article>
-          </section>
         </div>
-      </footer>
-    </main>
+      </div>
+    </section>
 
-    <!-- JavaScript -->
-    <!-- Incluye Bootstrap JS si lo utilizas -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer class="footer mt-auto py-5 bg-white">
+      <div class="container-fluid col-12 col-md-10 my-5">
+        <section class="row g-5 justify-content-center">
+          <article class="col-11 col-md-4 text-center text-md-start">
+            <h3 class="fs-2 fw-bolder mb-3">Links</h3>
+            <div class="gray-scale-800">
+              <p>Testimonios</p>
+              <p>Beneficios</p>
+              <p>Servicios</p>
+              <p>FAQ's</p>
+              <p class="d-none">Blog</p>
+            </div>
+          </article>
+          <article class="col-6 col-md-4 d-flex align-items-center flex-column">
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="fw-bolder mb-3">Empresa</h4>
+              <a href="https://app.manuable.com/jobs/new" class="gray-scale-800 mb-3" target="_blank">Bolsa de
+                empleo</a>
+              <a href="https://drive.google.com/file/d/1y7jWADQ8F9SP0GfUz4AcqxMDmy5WE7QL/view"
+                class="gray-scale-800 mb-3" target="_blank">Aviso de privacidad</a>
+              <a href="https://drive.google.com/file/d/1k65RCvJ6-wgTFwu82U_IKWgJk_FIWEzz/view"
+                class="gray-scale-800 mb-3" target="_blank">Términos y condiciones</a>
+              <a href="https://drive.google.com/file/d/1QF3fyJqPHnVupSg6A-muzB9CabrdVFlY/view?usp=sharing"
+                class="gray-scale-800 mb-3" target="_blank">Políticas de seguro de Manuable</a>
+            </div>
+          </article>
+          <article class="col-6 col-md-4 d-flex align-items-center flex-column">
+            <div class="d-flex flex-column align-items-start">
+              <h4 class="fw-bolder mb-3">Contacto</h4>
+              <p>Av Paseo de los Leones 267, Mitras Centro, 64460 Monterrey, N.L.</p>
+              <p>contacto@manuable.com</p>
+            </div>
+          </article>
+          <article class="col-12 mt-3">
+            <hr class="my-5 bg-black">
+            <div class="d-flex align-items-center justify-content-between">
+              <img src="assets/logo-base.svg" alt="Manuable Logo">
+              <p class="gray-scale-800 mb-0">© 2025 Manuable. Todos los derechos reservados.</p>
+              <div>
+                <a class="text-primary me-1" href="https://www.instagram.com/manuable" target="_blank">
+                  <img src="assets/icons/instagram.svg" alt="instagram" style="width: 25px;">
+                </a>
+                <a class="text-primary me-1" href="https://facebook.com/manuable/" target="_blank">
+                  <img src="assets/icons/facebook.svg" alt="Facebook" style="width: 25px;">
+                </a>
+                <a class="text-primary me-1" href="https://www.linkedin.com/company/manuable/" target="_blank">
+                  <img src="assets/icons/linkedin.svg" alt="tiktok" style="width: 25px;">
+                </a>
+                <a class="text-primary me-1" href="https://www.tiktok.com/@manuable" target="_blank">
+                  <img src="assets/icons/tiktok.svg" alt="tiktok" style="width: 25px;">
+                </a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </footer>
+  </main>
 
-    <script>
-      window.addEventListener('scroll', () => {
-        let header = document.querySelector('header');
-        header.classList.toggle('scrolling-active', window.scrollY > 30);
-        header.classList.toggle('shadow-sm', window.scrollY > 30);
-      });
-    </script>
+  <!-- JavaScript -->
+  <!-- Incluye Bootstrap JS si lo utilizas -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      function initFreshChat() {
-        window.fcWidget.init({
-          token: "5654b005-2182-4a7a-8a89-6eb2640144fb",
-          host: "https://wchat.freshchat.com",
-          config: {
-            headerProperty: {
-              foregroundColor: '#ffffff',
-              appName: 'Manuable'
-            },
-            content: {
-              headers: {
-                push_notification: "¡No te pierdas ninguna respuesta! ¿Quieres activar las notificaciones automáticas?",
-                push_notify_no: "No gracias",
-                push_notify_yes: "¡Sí!",
-                channel_response: {
-                  offline: 'Estamos momentáneamente inactivos. Por favor, déjanos un mensaje',
-                  online: {
-                    minutes: {
-                      one: "Actualmente respondiendo en {!time!} minutos",
-                      more: "Normalmente nos comunicamos contigo en {!time!} minutos"
-                    },
-                    hours: {
-                      one: "Actualmente respondiendo en menos de una hora",
-                      more: "Normalmente nos comunicamos contigo en {!time!} horas",
-                    }
+  <script>
+    window.addEventListener('scroll', () => {
+      let header = document.querySelector('header');
+      header.classList.toggle('scrolling-active', window.scrollY > 30);
+      header.classList.toggle('shadow-sm', window.scrollY > 30);
+    });
+  </script>
+
+  <script>
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "5654b005-2182-4a7a-8a89-6eb2640144fb",
+        host: "https://wchat.freshchat.com",
+        config: {
+          headerProperty: {
+            foregroundColor: '#ffffff',
+            appName: 'Manuable'
+          },
+          content: {
+            headers: {
+              push_notification: "¡No te pierdas ninguna respuesta! ¿Quieres activar las notificaciones automáticas?",
+              push_notify_no: "No gracias",
+              push_notify_yes: "¡Sí!",
+              channel_response: {
+                offline: 'Estamos momentáneamente inactivos. Por favor, déjanos un mensaje',
+                online: {
+                  minutes: {
+                    one: "Actualmente respondiendo en {!time!} minutos",
+                    more: "Normalmente nos comunicamos contigo en {!time!} minutos"
+                  },
+                  hours: {
+                    one: "Actualmente respondiendo en menos de una hora",
+                    more: "Normalmente nos comunicamos contigo en {!time!} horas",
                   }
                 }
               }
-            },
-            agent: {
-              hideName: false,
-              hidePic: false,
-              hideBio: false,
-            },
-          }
-        });
-      }
-
-      function initialize(i, t) {
-        var e;
-        if (i.getElementById(t)) {
-          initFreshChat();
-        } else {
-          e = i.createElement("script");
-          e.id = t;
-          e.async = true;
-          e.src = "https://wchat.freshchat.com/js/widget.js";
-          e.onload = initFreshChat;
-          i.head.appendChild(e);
-        }
-      }
-
-      function initiateCall() {
-        initialize(document, "freshchat-js-sdk");
-      }
-
-      window.addEventListener ? window.addEventListener("load", initiateCall, false) :
-        window.attachEvent("onload", initiateCall);
-      window.addEventListener("beforeunload", () => {
-        window.fcWidget.destroy();
-      });
-    </script>
-    <script>
-      var myCarousel = document.getElementById('carouselExampleIndicators')
-      myCarousel.addEventListener('slide.bs.carousel', function (event) {
-        // Obtener el índice del próximo slide
-        var nextSlideIndex = event.to;
-
-        // Seleccionar todos los botones que contienen los textos
-        var allTexts = document.querySelectorAll('[data-custom-target="collapseExample"]');
-
-        // Ocultar todos los textos (añadiendo la clase d-none)
-        allTexts.forEach(function (text) {
-          text.classList.remove('show');
-        });
-
-        // Seleccionar el texto del próximo slide basado en el índice
-        var nextText = myCarousel.querySelectorAll('.carousel-indicators [data-custom-target="collapseExample"]')[nextSlideIndex];
-
-        // Mostrar el texto del slide activo (removiendo la clase d-none)
-        if (nextText) {
-          nextText.classList.add('show');
+            }
+          },
+          agent: {
+            hideName: false,
+            hidePic: false,
+            hideBio: false,
+          },
         }
       });
-
-      // Inicializar el estado inicial para que solo el primer texto esté visible
-      document.addEventListener('DOMContentLoaded', function () {
-    var firstText = document.querySelector('.carousel-indicators [data-custom-target="collapseExample"]');
-    if (firstText) {
-      firstText.classList.add('show');
     }
-  });
-    </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLRXCKS"
-                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- Meta tag Facebook -->
-    <noscript><img height="1" width="1" style="display:none"
-                                        src="https://www.facebook.com/tr?id=1925225321260387&ev=PageView&noscript=1"
-                                        /></noscript>
-  </body>
+
+    function initialize(i, t) {
+      var e;
+      if (i.getElementById(t)) {
+        initFreshChat();
+      } else {
+        e = i.createElement("script");
+        e.id = t;
+        e.async = true;
+        e.src = "https://wchat.freshchat.com/js/widget.js";
+        e.onload = initFreshChat;
+        i.head.appendChild(e);
+      }
+    }
+
+    function initiateCall() {
+      initialize(document, "freshchat-js-sdk");
+    }
+
+    window.addEventListener ? window.addEventListener("load", initiateCall, false) :
+      window.attachEvent("onload", initiateCall);
+    window.addEventListener("beforeunload", () => {
+      window.fcWidget.destroy();
+    });
+  </script>
+  <script>
+    var myCarousel = document.getElementById('carouselExampleIndicators')
+    myCarousel.addEventListener('slide.bs.carousel', function (event) {
+      // Obtener el índice del próximo slide
+      var nextSlideIndex = event.to;
+
+      // Seleccionar todos los botones que contienen los textos
+      var allTexts = document.querySelectorAll('[data-custom-target="collapseExample"]');
+
+      // Ocultar todos los textos (añadiendo la clase d-none)
+      allTexts.forEach(function (text) {
+        text.classList.remove('show');
+      });
+
+      // Seleccionar el texto del próximo slide basado en el índice
+      var nextText = myCarousel.querySelectorAll('.carousel-indicators [data-custom-target="collapseExample"]')[nextSlideIndex];
+
+      // Mostrar el texto del slide activo (removiendo la clase d-none)
+      if (nextText) {
+        nextText.classList.add('show');
+      }
+    });
+
+    // Inicializar el estado inicial para que solo el primer texto esté visible
+    document.addEventListener('DOMContentLoaded', function () {
+      var firstText = document.querySelector('.carousel-indicators [data-custom-target="collapseExample"]');
+      if (firstText) {
+        firstText.classList.add('show');
+      }
+    });
+  </script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZLRXCKS" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- Meta tag Facebook -->
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1925225321260387&ev=PageView&noscript=1" /></noscript>
+</body>
+
 </html>
