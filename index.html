@@ -73,7 +73,7 @@
       });
 
       let offset = 0;
-      const speed = 4; // Ajustar la velocidad (número mayor = más rápido)
+      const speed = 3; // Ajustar la velocidad (número mayor = más rápido)
 
       const moveSwaper = () => {
         offset -= speed; // Desplazamiento continuo
@@ -129,19 +129,19 @@
             <div class="collapse navbar-collapse ms-4 fs-5 d-none d-lg-block" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Testimonios</a>
+                  <a class="nav-link active" aria-current="page" href="#testimonios">Testimonios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Beneficios</a>
+                  <a class="nav-link" href="#beneficios">Beneficios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Servicios</a>
+                  <a class="nav-link" href="#servicios">Servicios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">FAQs</a>
+                  <a class="nav-link" href="#faqs" tabindex="-1" aria-disabled="true">FAQs</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contacto</a>
+                  <a class="nav-link" href="#contacto" tabindex="-1" aria-disabled="true">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -170,8 +170,7 @@
                 Facilita la logística de tu negocio y crece tus ventas
               </h1>
               <div class="pe-xl-3">
-                <p class="me-xl-5 pe-xl-5 text-gray-p fs-4 my-4">Convierte tu negocio en una tienda en
-                  Integra tu ecommerce, aumenta tu eficiencia operativa, reduce costos, mejora la experiencia de tus
+                <p class="me-xl-5 pe-xl-5 text-gray-p fs-4 my-4">Integra tu ecommerce, aumenta tu eficiencia operativa, reduce costos, mejora la experiencia de tus
                   clientes y enfócate en crecer tus ventas a través de tu logística con Manuable.
                 </p>
               </div>
@@ -212,7 +211,7 @@
       </div>
     </section>
 
-    <section class="py-5 bg-white">
+    <section class="py-5 bg-white" id="testimonios">
       <div class="container">
         <div class="row justify-content-between">
           <!-- Texto de introducción -->
@@ -306,7 +305,7 @@
       </div>
     </section>
 
-    <section class="py-5 mt-5 bg-white position-relative">
+    <section class="py-5 mt-5 bg-white position-relative" id="beneficios">
       <div class="container ">
         <div class="row">
           <img src="assets/ribbon.png" class="top-50 start-50 translate-middle d-none d-md-block"
@@ -344,7 +343,7 @@
       </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5" id="servicios">
       <div class="container col-11 col-lg-10 my-5">
         <div class="row align-items-center d-flex">
           <div class="col-12 d-flex align-items-center flex-column mb-5 pb-5">
@@ -552,7 +551,7 @@
       </div>
     </section>
 
-    <section class="py-5 align-items-center mt-5">
+    <section class="py-5 align-items-center mt-5" id="faqs">
       <div class="container my-5">
         <div class="row align-items-center">
           <div class="col-12 d-flex align-items-start flex-column position-relative">
@@ -721,16 +720,16 @@
       </div>
     </section>
 
-    <footer class="footer mt-auto py-5 bg-white">
+    <footer class="footer mt-auto py-5 bg-white" id="contacto">
       <div class="container-fluid col-12 col-md-10 my-5">
         <section class="row g-5 justify-content-center">
           <article class="col-11 col-md-4 text-center text-md-start">
             <h3 class="fs-2 fw-bolder mb-3">Links</h3>
             <div class="gray-scale-800">
-              <p>Testimonios</p>
-              <p>Beneficios</p>
-              <p>Servicios</p>
-              <p>FAQ's</p>
+              <a class="nav-link ps-0" aria-current="page" href="#testimonios">Testimonios</a>
+              <a class="nav-link ps-0" href="#beneficios">Beneficios</a>
+              <a class="nav-link ps-0" href="#servicios">Servicios</a>
+              <a class="nav-link ps-0" href="#faqs">FAQs</a>
               <p class="d-none">Blog</p>
             </div>
           </article>
@@ -884,6 +883,21 @@
       if (firstText) {
         firstText.classList.add('show');
       }
+    });
+
+    document.querySelectorAll('a.nav-link').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1); // Remueve el '#' del href
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80, // Ajusta el valor según el espacio que quieras arriba
+            behavior: 'smooth'
+          });
+        }
+      });
     });
   </script>
   <!-- Google Tag Manager (noscript) -->
