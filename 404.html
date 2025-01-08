@@ -6,8 +6,15 @@
     <script type="text/javascript">
         // Obtener la ruta que el usuario intentó acceder
         var path = window.location.pathname + window.location.search;
-        // Redirigir a app.manuable.com manteniendo la misma ruta
-        window.location.replace('https://app.manuable.com' + path);
+
+        // Verificar si la ruta es "/ayuda"
+        if (path === "/ayuda" || path === "/ayuda/") {
+            // Redirigir a "/ayuda/es.html"
+            window.location.replace("/ayuda/es.html");
+        } else {
+            // Redirigir a la aplicación manteniendo la misma ruta
+            window.location.replace('https://app.manuable.com' + path);
+        }
     </script>
 </head>
 <body>
